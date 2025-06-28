@@ -77,4 +77,15 @@
     <target name="clean-cache" description="--> clean the ivy cache">
         <ivy:cleancache/>
     </target>
+
+    <!-- =================================
+          target: download-tomee
+         ================================= -->
+    <target name="download-tomee">
+        <mkdir dir="tomee"/>
+        <get src="https://archive.apache.org/dist/tomee/tomee-8.0.6/apache-tomee-8.0.6-plume.zip"
+             dest="tomee/apache-tomee.zip"
+             verbose="true"/>
+        <unzip src="tomee/apache-tomee.zip" dest="tomee"/>
+    </target>
 </project>
